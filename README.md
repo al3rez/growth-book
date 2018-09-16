@@ -1,6 +1,7 @@
 # Growth Book API
 
-[[https://github.com/azbshiri/growth-book/blob/master/public/growth.png|alt=growth]]
+![growth](https://github.com/azbshiri/growth-book/blob/master/public/growth.png)
+
 An web implementation of the growth book, designed by John Fish at Harvard, is a daily planner built to encourage a growth mindset and flow in all activities. 
 
 
