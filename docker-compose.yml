@@ -1,0 +1,27 @@
+version: '2'
+services:
+    go:
+        build: .
+        volumes:
+            - .:/go/src/github.com/azbshiri/growth-book
+        working_dir: /go/src/github.com/azbshiri/growth-book
+        command: ["./runner.sh"]
+        ports:
+            - "4000:4000"
+        links:
+            - db
+        environment:
+            POSTGRES_USER: alireza
+            POSTGRES_PASSWORD: alireza
+            POSTGRES_DB: growthbook
+    db:
+        image: onjin/alpine-postgres:9.5
+        ports:
+            - "5432"
+        environment:
+            LC_ALL: C.UTF-8
+            POSTGRES_USER: alireza
+            POSTGRES_PASSWORD: alireza
+            POSTGRES_DB: growthbook
+        volumes:
+            - /var/lib/postgresql/data
