@@ -1,16 +1,17 @@
 package main
 
 import (
-	"github.com/azbshiri/growth-book/config"
+	"os"
+
 	"github.com/azbshiri/growth-book/handler"
 	"github.com/go-pg/pg"
 )
 
 func main() {
 	db := pg.Connect(&pg.Options{
-		User:     config.DBUser,
-		Password: config.DBPassword,
-		Database: config.DBName,
+		User:     os.Getenv("DB_USER"),
+		Password: os.Getenv("DB_PASSWORD"),
+		Database: os.Getenv("DB_NAME"),
 	})
 
 	server := handler.NewServer(db)
