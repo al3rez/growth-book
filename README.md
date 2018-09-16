@@ -49,7 +49,7 @@ go get -v github.com/joho/godotenv
 go get -v github.com/labstack/echo
 ```
 
-Or you can just install all dependences explicitly:
+Or you can just install all dependences implicitly:
 
 ```
 go get -v ./...
