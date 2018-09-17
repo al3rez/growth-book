@@ -62,5 +62,4 @@ go get -v ./...
 - [x] Add database migrations (using `dbmate`)
 - [x] Use Repository pattern to access database layer
 - [ ] Add authentication mechanism
-- [ ] Dockerize application
 - [ ] Add unit and integeration tests
